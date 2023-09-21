@@ -1,3 +1,4 @@
+################################ Lists #########################################
 # Lists: ordered, mutable, allows duplicate elements
 my_list = ["bannana", "apple", "pineapple", "pear"]
 print(my_list)
@@ -38,5 +39,25 @@ print(newest_list)
 
 # slicing a list
 numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-a = numberList[1:5] # start slicing at index 1 and stop at index 2
+a = numberList[1:5] # start slicing at index 1 and stop at index 2 - the last index item is excluded
+# if you don't specify a start index it'll start from the beginning and if you don't 
+# specif an ending index, it'll go all the way to the end.
+# You can also add a step index so if you want to do every other item, or every third item you can do that. 
+a = numberList[::-1] # This will reverse your items
+a = numberList[::2] # This will get every other item in your list - output 1, 3, 5, 7, 9 in this case.
 print(a)
+
+# If you are trying to copy a list and are simply assigning an old list to a new list it will point to the same place in memory and modify the original list
+# as well as the new list. To avoid this, use the .copy() method.
+list_copy = numberList.copy()
+list_copy = list(numberList) # also accomplishes a copy
+list_copy = numberList[:] # also accomplishes a copy
+
+# an advanced way to create a new list with a modification to each item in the original list
+b = [i*i for i in numberList]
+print(b)
+
+
+
+
+################################ Tuples #########################################
