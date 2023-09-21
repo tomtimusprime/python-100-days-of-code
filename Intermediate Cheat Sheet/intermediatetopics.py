@@ -28,3 +28,15 @@ my_list2.clear() # removes everything from the list.
 my_list.reverse()
 my_list.sort() #changes the original list
 new_list = sorted(my_list2) #if you want a whole new list and preserve the orginal
+
+# Adding multiple items at once
+my_list3 = [0] * 5 # output [0, 0, 0, 0, 0]
+
+# concatenating lists
+newest_list = my_list + my_list2
+print(newest_list)
+
+# slicing a list
+numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = numberList[1:5] # start slicing at index 1 and stop at index 2
+print(a)
